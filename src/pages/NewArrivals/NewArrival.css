@@ -1,0 +1,87 @@
+/* Page Styling */
+.newarrival-page {
+  padding: 50px 70px;
+  background-color: #fff8e1; /* soft light background for new arrivals */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Title */
+.newarrival-title {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #ff6f00; /* warm orange for new arrivals */
+}
+
+/* Grid */
+.newarrival-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+/* Card */
+.newarrival-card {
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(255, 152, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  overflow: hidden;
+}
+
+.newarrival-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(255, 152, 0, 0.2);
+}
+
+/* Image */
+.newarrival-card img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+  transition: transform 0.3s;
+}
+
+.newarrival-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Product Name */
+.newarrival-card h4 {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #e65100; /* dark orange */
+}
+
+/* Product Price */
+.newarrival-card p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff8f00; /* medium orange */
+  margin-bottom: 12px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .newarrival-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .newarrival-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .newarrival-grid {
+    grid-template-columns: 1fr;
+  }
+}

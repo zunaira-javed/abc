@@ -1,0 +1,36 @@
+.shawls-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f6f6f6;
+  padding: 50px;
+  margin: 50px 0;
+  cursor: pointer;
+}
+
+.shawls-left {
+  text-align: center;
+  flex: 1;
+}
+
+.shawls-left h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.shawls-left p {
+  font-size: 18px;
+  color: #555;
+}
+
+.shawls-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.shawls-right img {
+  width: 380px;
+  border-radius: 12px;
+}

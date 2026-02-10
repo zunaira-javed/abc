@@ -1,0 +1,58 @@
+.summer-page {
+  padding: 50px 70px;
+}
+
+.summer-title {
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+/* GRID */
+.summer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+/* CARD */
+.summer-card {
+  cursor: pointer;
+}
+
+.summer-card img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: 0.3s ease;
+}
+
+.summer-card:hover img {
+  transform: scale(1.05);
+}
+
+.summer-card h4 {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.summer-card p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .summer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .summer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

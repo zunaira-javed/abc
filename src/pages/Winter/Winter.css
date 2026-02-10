@@ -1,0 +1,91 @@
+/* Winter.css */
+
+/* PAGE STYLING */
+.Winter-page {
+  padding: 50px 70px;
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff); /* icy gradient */
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+/* TITLE */
+.Winter-title {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #0277bd; /* winter blue */
+  text-shadow: 1px 1px 2px #b3e5fc;
+}
+
+/* GRID */
+.Winter-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+/* CARD */
+.Winter-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 150, 200, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  overflow: hidden;
+}
+
+.Winter-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 150, 200, 0.2);
+}
+
+/* IMAGE */
+.Winter-card img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+  transition: transform 0.3s;
+}
+
+.Winter-card:hover img {
+  transform: scale(1.05);
+}
+
+/* PRODUCT NAME */
+.Winter-card h4 {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #01579b; /* dark winter blue */
+}
+
+/* PRODUCT PRICE */
+.Winter-card p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0288d1; /* medium winter blue */
+  margin-bottom: 12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .Winter-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .Winter-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .Winter-grid {
+    grid-template-columns: 1fr;
+  }
+}

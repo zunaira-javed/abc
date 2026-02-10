@@ -1,0 +1,36 @@
+.footwear-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4f3f3;
+  padding: 50px;
+  margin: 50px 0;
+  cursor: pointer;
+}
+
+.footwear-left {
+  text-align: center;   /* ✅ center */
+  flex: 1;
+}
+
+.footwear-left h2 {
+  font-size: 48px;      /* ✅ font bara */
+  font-weight: 700;
+  margin-bottom: 20px; /* ✅ neeche gap */
+}
+
+.footwear-left p {
+  font-size: 18px;
+  color: #555;
+}
+
+.footwear-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.footwear-right img {
+  width: 380px;
+  border-radius: 12px;
+}
