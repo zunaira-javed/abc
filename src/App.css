@@ -451,7 +451,8 @@ html, body {
 
  .cards-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
   gap: 2px;
 }
 
@@ -647,21 +648,24 @@ html, body {
 
 /* Banner */
 .big-banner {
- width: 90%;
-  height: 180px;
-object-fit: cover;
-  border-radius: 15px;
-  margin-left: 80px;
-  margin-bottom: 50px;
-
+  width: 100%;
+  margin: 0 auto 50px;
 }
+
 
 /* Grid */
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
   gap: 40px 20px;
   justify-items: center;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    height: auto !important;
+    position: relative !important;
+  }
 }
 
 /* Box */
@@ -771,11 +775,10 @@ object-fit: cover;
   color: #777;
 }
 .brand-section{
-  display: flex;
+  margin: 50px auto 0;
   width: 90%;
- margin-left: 50px;
- margin-top: 50px;
 }
+
 .brands-heading{
    font-weight: bold;
    font-size: 25px;
@@ -841,7 +844,8 @@ object-fit: cover;
 
 .collection-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+ grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
   gap: 25px;
 }
 
@@ -887,7 +891,8 @@ object-fit: cover;
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
   gap: 10px;
 }
 
@@ -1122,9 +1127,9 @@ object-fit: cover;
   align-items: center;
 }
 .main-img-wrapper {
- 
-  width: 300px;
-  height: 800px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 }
 
 .main-img-wrapper img.main-img {
@@ -1209,9 +1214,10 @@ object-fit: cover;
 }
 
 .detail-image img {
-  width: 450px;
-  border-radius: 12px;
+  width: 100%;
+  max-width: 450px;
 }
+
 
 .detail-info {
   max-width: 400px;
@@ -1330,7 +1336,8 @@ object-fit: cover;
 /* PRODUCT GRID */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
   gap: 28px;
 }
 
@@ -1795,7 +1802,8 @@ img {
 /* ================= CATEGORY / PRODUCTS GRID ================= */
 @media (max-width: 1200px) {
   .category-grid {
-    grid-template-columns: repeat(4, 1fr);
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
   }
 }
 
@@ -2639,3 +2647,58 @@ img {
 }
 
 
+
+/* ================= MASTER RESPONSIVE FIX ================= */
+
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
+
+/* All images responsive */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+/* Remove fixed widths */
+.main-img-wrapper,
+.detail-image img,
+.image-section,
+.detail-container img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Fix grids auto responsive */
+.cards-grid,
+.collection-grid,
+.product-grid,
+.products-grid {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important;
+}
+
+/* Fix big fixed image heights */
+.card img,
+.collection-card img,
+.product-card img,
+.mostPopular-img {
+  height: auto !important;
+}
+
+/* Fix detail page layout */
+@media (max-width: 768px) {
+  .detail-container {
+    flex-direction: column !important;
+  }
+
+  .image-section {
+    width: 100% !important;
+  }
+
+  .main-img-wrapper {
+    height: auto !important;
+  }
+}
